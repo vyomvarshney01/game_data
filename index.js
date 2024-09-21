@@ -18,7 +18,7 @@ app.get('/games', async (req, res) => {
       res.status(400).json('No game details found');
     }
     res.status(200).json({ games });
-  } catch (error) {
+  } catch(error) {
     res.status(500).json({ error: error.message });
   }
 });
@@ -33,7 +33,7 @@ app.get('/games/details/:id', async (req, res) => {
     res.status(200).json({
       game,
     });
-  } catch (error) {
+  } catch(error) {
     res.status(500).json({ error: error.message });
   }
 });
